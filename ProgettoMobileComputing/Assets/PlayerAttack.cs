@@ -14,6 +14,7 @@ public class PlayerAttack : MonoBehaviour
     public Animator animator;
 
     bool canAttack = true;
+    public bool isAttacking = false;
 
     
     // Start is called before the first frame update
@@ -25,13 +26,15 @@ public class PlayerAttack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        animator.SetBool("IsAttacking", isAttacking);
         /*if(Input.GetKeyDown(KeyCode.Space)){
             Attack();
         }*/
-        if(canAttack && Input.GetMouseButtonDown(0)){
+        /*if(canAttack && Input.GetMouseButtonDown(0)){
+            isAttacking = true;
             StartCoroutine(AttackTimer());
 
-        }
+        }*/
        
         
 
@@ -47,6 +50,13 @@ public class PlayerAttack : MonoBehaviour
 
     }
 
+    public void AttackButton(){
+        if(canAttack){
+            isAttacking = true;
+            StartCoroutine(AttackTimer());
+        }
+    }
+
     public void Attack(){
         attacking = true;
         attackArea.SetActive(attacking);
@@ -59,6 +69,7 @@ public class PlayerAttack : MonoBehaviour
         Attack();
         yield return new WaitForSeconds(rate);
         canAttack = true;
+        isAttacking = false;
 
     }
 }

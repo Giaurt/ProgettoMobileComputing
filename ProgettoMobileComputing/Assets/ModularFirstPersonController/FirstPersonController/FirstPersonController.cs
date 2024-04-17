@@ -8,19 +8,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.InputSystem;
+
 
 #if UNITY_EDITOR
-    using UnityEditor;
+using UnityEditor;
     using System.Net;
 #endif
 
 public class FirstPersonController : MonoBehaviour
 {
+    
     private Rigidbody rb;
-
+    
     #region Camera Movement Variables
-
+    
     public Camera playerCamera;
+    public Joystick joystick;
+    public Joystick visualJoystick;
 
     public float fov = 60f;
     public bool invertCamera = false;
@@ -54,7 +59,7 @@ public class FirstPersonController : MonoBehaviour
     #endregion
 
     #region Movement Variables
-
+    
     public bool playerCanMove = true;
     public float walkSpeed = 5f;
     public float maxVelocityChange = 10f;
@@ -207,16 +212,16 @@ public class FirstPersonController : MonoBehaviour
         // Control camera movement
         if(cameraCanMove)
         {
-            yaw = transform.localEulerAngles.y + Input.GetAxis("Mouse X") * mouseSensitivity;
+            yaw = transform.localEulerAngles.y + visualJoystick.Horizontal * mouseSensitivity;
 
             if (!invertCamera)
             {
-                pitch -= mouseSensitivity * Input.GetAxis("Mouse Y");
+                pitch -= mouseSensitivity * visualJoystick.Vertical;
             }
             else
             {
                 // Inverted Y
-                pitch += mouseSensitivity * Input.GetAxis("Mouse Y");
+                pitch += mouseSensitivity * visualJoystick.Vertical;
             }
 
             // Clamp pitch between lookAngle
@@ -371,7 +376,9 @@ public class FirstPersonController : MonoBehaviour
         if (playerCanMove)
         {
             // Calculate how fast we should be moving
-            Vector3 targetVelocity = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+            //Vector3 targetVelocity = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+            Vector3 targetVelocity = new Vector3(joystick.Horizontal, 0, joystick.Vertical);
+            
 
             // Checks if player is walking and isGrounded
             // Will allow head bob
@@ -560,6 +567,8 @@ public class FirstPersonController : MonoBehaviour
         GUILayout.Label("Camera Setup", new GUIStyle(GUI.skin.label) { alignment = TextAnchor.MiddleCenter, fontStyle = FontStyle.Bold, fontSize = 13 }, GUILayout.ExpandWidth(true));
         EditorGUILayout.Space();
 
+        fpc.joystick = (Joystick)EditorGUILayout.ObjectField(new GUIContent("Joystick", "Camera attached to the controller."), fpc.joystick, typeof(Joystick), true);
+        fpc.visualJoystick = (Joystick)EditorGUILayout.ObjectField(new GUIContent("visualJoystick", "Camera attached to the controller."), fpc.visualJoystick, typeof(Joystick), true);
         fpc.playerCamera = (Camera)EditorGUILayout.ObjectField(new GUIContent("Camera", "Camera attached to the controller."), fpc.playerCamera, typeof(Camera), true);
         fpc.fov = EditorGUILayout.Slider(new GUIContent("Field of View", "The camera’s view angle. Changes the player camera directly."), fpc.fov, fpc.zoomFOV, 179f);
         fpc.cameraCanMove = EditorGUILayout.ToggleLeft(new GUIContent("Enable Camera Rotation", "Determines if the camera is allowed to move."), fpc.cameraCanMove);

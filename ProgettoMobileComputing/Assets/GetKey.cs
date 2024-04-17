@@ -19,7 +19,7 @@ public class GetKey : MonoBehaviour
     void OnTriggerEnter(Collider collider){
         if(collider.CompareTag("Player")){
             GetComponentInParent<UnlockDoor>().OpenDoor();
-            GetComponentInParent<GenerateRoom>().Generate();
+            GameObject.FindGameObjectWithTag("RoomSpawner").GetComponent<RoomSpawner>().SpawnRoom();
             Destroy(gameObject);
             
         }
