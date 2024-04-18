@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028328, g: 0.22571322, b: 0.30692163, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -689,7 +689,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4459864850019384740, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4459864850019384740, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
       propertyPath: enableZoom
@@ -710,6 +710,10 @@ PrefabInstance:
     - target: {fileID: 4459864850019384750, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
       propertyPath: m_Name
       value: FirstPersonController
+      objectReference: {fileID: 0}
+    - target: {fileID: 6791116692881121235, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4459864850019384740, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
@@ -1158,15 +1162,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 19496917198347715, guid: 9385f78e63d3606489cb2eda250aa111, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.9999995
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 19496917198347715, guid: 9385f78e63d3606489cb2eda250aa111, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.79
       objectReference: {fileID: 0}
     - target: {fileID: 19496917198347715, guid: 9385f78e63d3606489cb2eda250aa111, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 3.98
+      value: 3.1
       objectReference: {fileID: 0}
     - target: {fileID: 19496917198347715, guid: 9385f78e63d3606489cb2eda250aa111, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1196,9 +1200,29 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1007341331216903542, guid: 9385f78e63d3606489cb2eda250aa111, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 2193337421571619174, guid: 9385f78e63d3606489cb2eda250aa111, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 5632437404554696402, guid: 9385f78e63d3606489cb2eda250aa111, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 3.17
+      objectReference: {fileID: 0}
     - target: {fileID: 5696225213113308882, guid: 9385f78e63d3606489cb2eda250aa111, type: 3}
       propertyPath: m_Name
       value: Room1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6081110047557043658, guid: 9385f78e63d3606489cb2eda250aa111, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 3.17
+      objectReference: {fileID: 0}
+    - target: {fileID: 7110973281468268409, guid: 9385f78e63d3606489cb2eda250aa111, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 3.17
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1230,10 +1254,12 @@ MonoBehaviour:
   playerCamera: {fileID: 268662979}
   joystick: {fileID: 1715260499}
   visualJoystick: {fileID: 1349969958}
+  kbSpeed: 500
   horSpeed: 600
   verSpeed: 900
   horVisualSpeed: 2
   verVisualSpeed: 1
+  sens: 30
 --- !u!114 &2057687492 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 310153712987750315, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
@@ -1365,12 +1391,24 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 4987626625753564400, guid: b4e79ee5e3625cb4f83f82a00c00b836, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4987626625753564400, guid: b4e79ee5e3625cb4f83f82a00c00b836, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4987626625753564400, guid: b4e79ee5e3625cb4f83f82a00c00b836, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4987626625753564400, guid: b4e79ee5e3625cb4f83f82a00c00b836, type: 3}
       propertyPath: m_LocalPosition.x
       value: 6.911263
       objectReference: {fileID: 0}
     - target: {fileID: 4987626625753564400, guid: b4e79ee5e3625cb4f83f82a00c00b836, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.5500093
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4987626625753564400, guid: b4e79ee5e3625cb4f83f82a00c00b836, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1403,6 +1441,10 @@ PrefabInstance:
     - target: {fileID: 4987626625753564400, guid: b4e79ee5e3625cb4f83f82a00c00b836, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4987626625753564400, guid: b4e79ee5e3625cb4f83f82a00c00b836, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5775938920963021002, guid: b4e79ee5e3625cb4f83f82a00c00b836, type: 3}
       propertyPath: m_Name
