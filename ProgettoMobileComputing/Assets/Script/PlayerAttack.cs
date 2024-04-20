@@ -52,6 +52,7 @@ public class PlayerAttack : MonoBehaviour
 
     public void AttackButton(){
         if(canAttack){
+            Debug.Log("entra");
             isAttacking = true;
             StartCoroutine(AttackTimer());
         }
@@ -60,7 +61,8 @@ public class PlayerAttack : MonoBehaviour
     public void Attack(){
         attacking = true;
         attackArea.SetActive(attacking);
-        //animator.SetBool("Attack1", attacking);
+        Debug.Log("entraqqqqqqqqqqqqqq");
+        
         
     }
 
