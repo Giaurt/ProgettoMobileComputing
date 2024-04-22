@@ -21,7 +21,7 @@ public class SpawnKey : MonoBehaviour
     void Update()
     {
         if(canSpawn && GetComponent<SpawnEnemies>().enemiesNumber==0){
-            GameObject key = Instantiate(keyPrefab, new Vector3(Random.Range(spawnPos1.position.x, spawnPos2.position.x), spawnPos1.position.y, Random.Range(spawnPos1.position.z, spawnPos2.position.z)), Quaternion.identity);
+            GameObject key = Instantiate(keyPrefab, new Vector3(Random.Range(spawnPos1.position.x, spawnPos2.position.x), spawnPos1.position.y, Random.Range(spawnPos1.position.z, spawnPos2.position.z)), Quaternion.Euler(90f, 0f, 0f));
             key.transform.SetParent(gameObject.transform);
             canSpawn = false;
         }

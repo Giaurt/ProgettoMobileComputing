@@ -633,12 +633,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerCamera: {fileID: 1273568258}
   mJoystick: {fileID: 1715260499}
-  horSpeed: 1800
-  verSpeed: 1800
-  vHorSpeed: 2
-  vVerSpeed: 1
+  movSpeed: 1800
+  vHorSpeed: 150
+  vVerSpeed: 120
   vJoystick: {fileID: 1349969958}
-  angle: 0
 --- !u!54 &1102805630
 Rigidbody:
   m_ObjectHideFlags: 0
