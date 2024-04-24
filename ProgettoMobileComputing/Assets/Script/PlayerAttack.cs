@@ -35,7 +35,11 @@ public class PlayerAttack : MonoBehaviour
             StartCoroutine(AttackTimer());
 
         }*/
-       
+       if(canAttack && Input.GetKeyDown(KeyCode.Space)){
+            Debug.Log("entra");
+            isAttacking = true;
+            StartCoroutine(AttackTimer());
+        }
         
 
         if(attacking){
@@ -61,7 +65,7 @@ public class PlayerAttack : MonoBehaviour
     public void Attack(){
         attacking = true;
         attackArea.SetActive(attacking);
-        Debug.Log("entraqqqqqqqqqqqqqq");
+        
         
         
     }
