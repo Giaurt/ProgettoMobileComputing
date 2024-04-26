@@ -28,7 +28,7 @@ public class PlayerMovement : MonoBehaviour
     void FixedUpdate()
     {
         //PlayerMovement
-        movement = transform.forward * mJoystick.Vertical + transform.right * mJoystick.Horizontal;
+        movement = playerCamera.transform.forward * mJoystick.Vertical + playerCamera.transform.right * mJoystick.Horizontal;
 
         rb.AddForce(movement * movSpeed * Time.deltaTime, ForceMode.Force);
 
@@ -39,7 +39,7 @@ public class PlayerMovement : MonoBehaviour
         yRotation += joystickX;
 
         xRotation -= joystickY;
-        transform.rotation = Quaternion.Euler(xRotation, yRotation, 0);
+        playerCamera.transform.rotation = Quaternion.Euler(xRotation, yRotation, 0);
         
 
     }

@@ -8,6 +8,7 @@ TagManager:
   - RoomSpawner
   - StartingRoom
   - Target
+  - AttackRange
   layers:
   - Default
   - TransparentFX

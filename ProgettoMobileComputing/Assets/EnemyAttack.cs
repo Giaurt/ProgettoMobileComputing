@@ -1,11 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
-public class PlayerAttack : MonoBehaviour
+public class EnemyAttack : MonoBehaviour
 {
-    
     public GameObject attackArea = default;
     bool attacking = false;
     public float timeToAttack;
@@ -15,18 +13,21 @@ public class PlayerAttack : MonoBehaviour
 
     bool canAttack = true;
     public bool isAttacking = false;
+    bool isInRange;
+    EnemyFollow enemyFollow;
 
     
     // Start is called before the first frame update
     void Start()
     {
-        attackArea = transform.GetChild(0).GetChild(0).gameObject;
+        enemyFollow = GetComponent<EnemyFollow>();
+        attackArea = transform.GetChild(0).gameObject;
     }
 
     // Update is called once per frame
     void Update()
     {
-        animator.SetBool("IsAttacking", isAttacking);
+        animator.SetBool("IsInRange", enemyFollow.canAttackRange);
         /*if(Input.GetKeyDown(KeyCode.Space)){
             Attack();
         }*/
@@ -35,7 +36,7 @@ public class PlayerAttack : MonoBehaviour
             StartCoroutine(AttackTimer());
 
         }*/
-       if(canAttack && Input.GetKeyDown(KeyCode.Space)){
+       if(canAttack && enemyFollow.canAttackRange){
             Debug.Log("entra");
             isAttacking = true;
             StartCoroutine(AttackTimer());
@@ -54,13 +55,13 @@ public class PlayerAttack : MonoBehaviour
 
     }
 
-    public void AttackButton(){
+    /*public void AttackButton(){
         if(canAttack){
-            Debug.Log("entra");
+            Debug.Log("entraAtta");
             isAttacking = true;
             StartCoroutine(AttackTimer());
         }
-    }
+    }*/
 
     public void Attack(){
         attacking = true;
@@ -78,4 +79,15 @@ public class PlayerAttack : MonoBehaviour
         isAttacking = false;
 
     }
+    /*void OnTriggerEnter(Collider other) {
+        if(other.gameObject.CompareTag("Player")){
+            isInRange = true;
+        } 
+    }
+    void OnTriggerExit(Collider other) {
+        if(other.gameObject.CompareTag("Player")){
+            isInRange = false;
+            Debug.Log("uscito");
+        } 
+    }*/
 }

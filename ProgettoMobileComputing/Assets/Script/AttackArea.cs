@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AttackArea : MonoBehaviour
 {
-    public float damage;
+    public float damage = 50;
     
     private void OnTriggerEnter(Collider collider) {
         if(collider.CompareTag("Enemy")){
