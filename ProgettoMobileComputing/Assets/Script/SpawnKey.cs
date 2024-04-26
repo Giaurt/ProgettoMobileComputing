@@ -9,10 +9,11 @@ public class SpawnKey : MonoBehaviour
     public Transform spawnPos1;
     public Transform spawnPos2;
     bool canSpawn = true;
+    ScoreManager scoreManager;
     
     void Start()
     {
-        
+        scoreManager = FindAnyObjectByType<ScoreManager>();
     }
 
     
@@ -24,6 +25,7 @@ public class SpawnKey : MonoBehaviour
             GameObject key = Instantiate(keyPrefab, new Vector3(Random.Range(spawnPos1.position.x, spawnPos2.position.x), spawnPos1.position.y, Random.Range(spawnPos1.position.z, spawnPos2.position.z)), Quaternion.Euler(90f, 0f, 0f));
             key.transform.SetParent(gameObject.transform);
             canSpawn = false;
+            scoreManager.Survived();
         }
     }
 }

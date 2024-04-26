@@ -8,9 +8,11 @@ public class Health : MonoBehaviour
     public float health = 100f;
     public float currentHealth;
     bool isDead = false;
+    ScoreManager scoreManager;
     void Start()
     {
         currentHealth = health;
+        scoreManager = FindAnyObjectByType<ScoreManager>();
     }
 
     // Update is called once per frame
@@ -21,6 +23,7 @@ public class Health : MonoBehaviour
             transform.parent.GetComponent<SpawnEnemies>().EnemyKilled();
             GetComponent<Rigidbody>().useGravity = false;
             GetComponent<CapsuleCollider>().enabled = false;
+            scoreManager.EnemyKilled();
         }
         if(currentHealth == 0){
             isDead = true;

@@ -13,8 +13,8 @@ public class PlayerStats : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        skeletonKilled.text = enemyKilled.ToString();
-        roomSurvived.text = rooms.ToString();
+        skeletonKilled.text = PlayerPrefs.GetInt("MaxSkeletonKilled").ToString();
+        roomSurvived.text = PlayerPrefs.GetInt("MaxRoomSurvived").ToString();
     }
 
     // Update is called once per frame

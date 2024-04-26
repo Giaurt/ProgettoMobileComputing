@@ -864,7 +864,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackArea: {fileID: 0}
   timeToAttack: 0.2
-  rate: 1
+  rate: 1.5
   animator: {fileID: 8881890470304338478}
   isAttacking: 0
 --- !u!1 &2803820806639422040
