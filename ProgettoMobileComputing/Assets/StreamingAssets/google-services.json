@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "315681229661",
+    "project_id": "bonecryptlabyrinth",
+    "storage_bucket": "bonecryptlabyrinth.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:315681229661:android:b55c97510713f68f0bf6b4",
+        "android_client_info": {
+          "package_name": "com.DefaultCompany.ProgettoMobileComputing"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAN8TLJaeWygcN5rjtT7S3ygSfU0V0upPQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
