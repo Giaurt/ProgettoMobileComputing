@@ -16,6 +16,7 @@ public class EnemyAttack : MonoBehaviour
     bool isInRange;
     EnemyFollow enemyFollow;
 
+    bool isDead;
     
     // Start is called before the first frame update
     void Start()
@@ -27,17 +28,11 @@ public class EnemyAttack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        isDead = GetComponent<Health>().isDead;
         animator.SetBool("IsInRange", enemyFollow.canAttackRange);
-        /*if(Input.GetKeyDown(KeyCode.Space)){
-            Attack();
-        }*/
-        /*if(canAttack && Input.GetMouseButtonDown(0)){
-            isAttacking = true;
-            StartCoroutine(AttackTimer());
-
-        }*/
-       if(canAttack && enemyFollow.canAttackRange){
-            Debug.Log("entra");
+        
+       if(canAttack && enemyFollow.canAttackRange && !isDead){
+            
             isAttacking = true;
             StartCoroutine(AttackTimer());
         }
@@ -55,13 +50,7 @@ public class EnemyAttack : MonoBehaviour
 
     }
 
-    /*public void AttackButton(){
-        if(canAttack){
-            Debug.Log("entraAtta");
-            isAttacking = true;
-            StartCoroutine(AttackTimer());
-        }
-    }*/
+    
 
     public void Attack(){
         attacking = true;
@@ -79,15 +68,5 @@ public class EnemyAttack : MonoBehaviour
         isAttacking = false;
 
     }
-    /*void OnTriggerEnter(Collider other) {
-        if(other.gameObject.CompareTag("Player")){
-            isInRange = true;
-        } 
-    }
-    void OnTriggerExit(Collider other) {
-        if(other.gameObject.CompareTag("Player")){
-            isInRange = false;
-            Debug.Log("uscito");
-        } 
-    }*/
+    
 }

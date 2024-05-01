@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting.Dependencies.Sqlite;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -77,7 +76,7 @@ public class EnemyFollow : MonoBehaviour
     void OnTriggerExit(Collider other) {
         if(other.gameObject.CompareTag("Player")){
             canAttackRange = false;
-            Debug.Log("uscito");
+            //Debug.Log("uscito");
         } 
     }
 }

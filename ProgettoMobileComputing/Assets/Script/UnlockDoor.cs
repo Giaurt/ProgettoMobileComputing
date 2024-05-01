@@ -20,7 +20,7 @@ public class UnlockDoor : MonoBehaviour
     }
 
     public void OpenDoor(){
-        Debug.Log("Sblocca porta");
+        
         door.transform.Rotate(0, -90, 0);
         door.transform.position = new Vector3(door.transform.position.x+1, door.transform.position.y, door.transform.position.z+1);
     }

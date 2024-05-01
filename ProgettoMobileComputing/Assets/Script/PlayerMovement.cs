@@ -31,6 +31,7 @@ public class PlayerMovement : MonoBehaviour
         movement = playerCamera.transform.forward * mJoystick.Vertical + playerCamera.transform.right * mJoystick.Horizontal;
 
         rb.AddForce(movement * movSpeed * Time.deltaTime, ForceMode.Force);
+        
 
         //VisualMovement
         joystickX = vJoystick.Horizontal * vHorSpeed * Time.deltaTime;
@@ -43,4 +44,5 @@ public class PlayerMovement : MonoBehaviour
         
 
     }
+    
 }

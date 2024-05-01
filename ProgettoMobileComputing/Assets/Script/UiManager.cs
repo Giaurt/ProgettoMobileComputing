@@ -37,10 +37,12 @@ public class UiManager : MonoBehaviour
     }
     public void PauseButton(){
         pauseMenu.SetActive(true);
+        joystickUI.SetActive(false);
         Time.timeScale = 0;
     }
     public void ResumeButton(){
         pauseMenu.SetActive(false);
+        joystickUI.SetActive(true);
         Time.timeScale = 1;
     }
 }

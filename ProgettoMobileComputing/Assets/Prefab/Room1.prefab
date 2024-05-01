@@ -3672,10 +3672,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 19496917198347715}
-  - component: {fileID: 6957432099174470116}
   - component: {fileID: 9222589201327096044}
   - component: {fileID: 7709334125752483461}
   - component: {fileID: 4228041322531786380}
+  - component: {fileID: 4757951806601962449}
   m_Layer: 0
   m_Name: Room1
   m_TagString: Untagged
@@ -3759,21 +3759,6 @@ Transform:
   - {fileID: 2193337421571619174}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6957432099174470116
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5696225213113308882}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f5fee4aa86616844fa5b8cc875c7c037, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  roomPrefab:
-  - {fileID: 5696225213113308882}
-  - {fileID: 659875725487113279, guid: 03344f6abc125ee418418baa8473bc2e, type: 3}
 --- !u!114 &9222589201327096044
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3821,6 +3806,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   door: {fileID: 1016132328616932458}
   hasKey: 0
+--- !u!114 &4757951806601962449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5696225213113308882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5498b017de7601342948b9f2fbd9b8e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  potionPrefab: {fileID: 2105642623487264571, guid: 9bee0e66a5f223043acc5cb991f4fc0a, type: 3}
+  spawnPos1: {fileID: 1007341331216903542}
+  spawnPos2: {fileID: 2193337421571619174}
+  rnd: 0
 --- !u!1 &5880476277170895729
 GameObject:
   m_ObjectHideFlags: 0

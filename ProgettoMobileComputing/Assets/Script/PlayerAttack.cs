@@ -58,6 +58,7 @@ public class PlayerAttack : MonoBehaviour
         if(canAttack){
             Debug.Log("entra");
             isAttacking = true;
+            
             StartCoroutine(AttackTimer());
         }
     }
@@ -71,6 +72,8 @@ public class PlayerAttack : MonoBehaviour
     }
 
     IEnumerator AttackTimer(){
+        int i = Random.Range(0, FindAnyObjectByType<AudioManager>().swordSounds.Length);
+        FindAnyObjectByType<AudioManager>().RandomSwordSound(i);
         canAttack = false;
         Attack();
         yield return new WaitForSeconds(rate);

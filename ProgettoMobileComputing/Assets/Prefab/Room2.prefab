@@ -752,9 +752,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2858145248266680588}
   - component: {fileID: 1116243568510662306}
-  - component: {fileID: 5908192273566463648}
   - component: {fileID: 2258542789719992990}
   - component: {fileID: 5941413333509261546}
+  - component: {fileID: 7860098276036347458}
   m_Layer: 0
   m_Name: Room2
   m_TagString: Untagged
@@ -909,21 +909,6 @@ MonoBehaviour:
   rndMin: 3
   rndMax: 6
   enemiesNumber: 0
---- !u!114 &5908192273566463648
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 659875725487113279}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f5fee4aa86616844fa5b8cc875c7c037, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  roomPrefab:
-  - {fileID: 5696225213113308882, guid: 9385f78e63d3606489cb2eda250aa111, type: 3}
-  - {fileID: 659875725487113279}
 --- !u!114 &2258542789719992990
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -953,6 +938,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   door: {fileID: 7070248021445733904}
   hasKey: 0
+--- !u!114 &7860098276036347458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 659875725487113279}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5498b017de7601342948b9f2fbd9b8e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  potionPrefab: {fileID: 2105642623487264571, guid: 9bee0e66a5f223043acc5cb991f4fc0a, type: 3}
+  spawnPos1: {fileID: 7678505890288020668}
+  spawnPos2: {fileID: 85423559083900577}
+  rnd: 0
 --- !u!1 &793444049811081733
 GameObject:
   m_ObjectHideFlags: 0

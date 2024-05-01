@@ -22,11 +22,12 @@ public class GetKey : MonoBehaviour
 
     void OnTriggerEnter(Collider collider){
         if(collider.CompareTag("Player")){
+            FindAnyObjectByType<AudioManager>().Play("UnlockDoor");
             GetComponentInParent<UnlockDoor>().OpenDoor();
             GameObject.FindGameObjectWithTag("RoomSpawner").GetComponent<RoomSpawner>().SpawnRoom();
             Destroy(gameObject);
             closedDoor.SetActive(true);
-            //openDoor.SetActive(false);
+
             
         }
     }

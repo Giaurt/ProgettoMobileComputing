@@ -22,6 +22,7 @@ public class UiAuthManager : MonoBehaviour
             Debug.Log("Instance already exists, destroying object!");
             Destroy(this);
         }
+        
     }
 
     //Functions to change the login screen UI
@@ -38,5 +39,7 @@ public class UiAuthManager : MonoBehaviour
     public void LoggedIn(){
         loginUI.SetActive(false);
         startUI.SetActive(true);
+        Debug.LogWarning("Logged In UI");
     }
+    
 }

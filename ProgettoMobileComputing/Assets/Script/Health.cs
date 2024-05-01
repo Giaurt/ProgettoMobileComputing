@@ -7,7 +7,7 @@ public class Health : MonoBehaviour
     public Animator animator;
     public float health = 100f;
     public float currentHealth;
-    bool isDead = false;
+    public bool isDead = false;
     ScoreManager scoreManager;
     void Start()
     {
@@ -20,8 +20,10 @@ public class Health : MonoBehaviour
     {
         if(currentHealth<=0 && !isDead){
             animator.Play("Death");
+            
             transform.parent.GetComponent<SpawnEnemies>().EnemyKilled();
             GetComponent<Rigidbody>().useGravity = false;
+            GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePosition;
             GetComponent<CapsuleCollider>().enabled = false;
             scoreManager.EnemyKilled();
         }
@@ -32,6 +34,8 @@ public class Health : MonoBehaviour
 
     public void Damage(float damage){
         if(!isDead){
+            int rnd = Random.Range(0, FindAnyObjectByType<AudioManager>().monsterHurtSounds.Length);
+            FindAnyObjectByType<AudioManager>().RandomMonsterHurtSound(rnd);
             animator.Play("TakeDamage");
             currentHealth = currentHealth - damage;
         }

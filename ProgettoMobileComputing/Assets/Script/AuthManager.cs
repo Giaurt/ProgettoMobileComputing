@@ -28,9 +28,10 @@ public class AuthManager : MonoBehaviour
     public TMP_Text warningRegisterText;
 
 
-
+    bool hasCheckedLogin;
 
     void Awake() {
+
         FirebaseApp.CheckAndFixDependenciesAsync().ContinueWith(task =>
         {
             dependencyStatus= task.Result;
@@ -40,11 +41,72 @@ public class AuthManager : MonoBehaviour
                 Debug.Log("Could not resolve all Firebase dependencies: " + dependencyStatus);
             }
         });
+        
     }
+        private void FixedUpdate()
+    {
+        if(auth != null && hasCheckedLogin == false)
+        {
+            CheckAutoLogin();
+            hasCheckedLogin = true;
+        }
+    }
+
+    void CheckAutoLogin()
+    {
+
+        if(auth.CurrentUser != null) // We have been automatically logged in
+        {
+            UiAuthManager.instance.LoggedIn();
+            //Skip the login screen becuase we are already logged in
+        }
+    }
+
+    void OnApplicationQuit()
+    {
+    auth.SignOut();
+    }
+
+
+
+
+// Handle initialization of the necessary firebase modules:
+/*void InitializeFirebase() {
+  Debug.Log("Setting up Firebase Auth");
+  auth = Firebase.Auth.FirebaseAuth.DefaultInstance;
+  auth.StateChanged += AuthStateChanged;
+  AuthStateChanged(this, null);
+}
+
+// Track state changes of the auth object.
+void AuthStateChanged(object sender, System.EventArgs eventArgs) {
+  if (auth.CurrentUser != User) {
+    bool signedIn = User != auth.CurrentUser && auth.CurrentUser != null;
+    if (!signedIn && User != null) {
+      Debug.Log("Signed out " + User.UserId);
+    }
+    User = auth.CurrentUser;
+    if (signedIn) {
+        Debug.Log("Signed in " + User.Email);
+        UiAuthManager.instance.LoggedIn();
+    }
+  }
+}*/
+
+// Handle removing subscription and reference to the Auth instance.
+// Automatically called by a Monobehaviour after Destroy is called on it.
+/*void OnDestroy() {
+  auth.StateChanged -= AuthStateChanged;
+  auth = null;
+}*/
+
+
+
 
     void InitializerFirebase(){
         Debug.Log("Setting up Firebase Auth");
         auth = FirebaseAuth.DefaultInstance;
+        
     }
 
     public void LoginButton(){
