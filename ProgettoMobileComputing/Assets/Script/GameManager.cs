@@ -18,10 +18,12 @@ public class GameManager : MonoBehaviour
     }
 
     public void StartButton(){
+        FindAnyObjectByType<AudioManager>().Play("UISound");
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     public void QuitButton(){
+        FindAnyObjectByType<AudioManager>().Play("UISound");
         Debug.Log("quit");
         Application.Quit();
     }

@@ -64,8 +64,8 @@ MonoBehaviour:
     pitch: 1.5
     loop: 0
     source: {fileID: 0}
-  - name: MonsterHurt
-    clip: {fileID: 8300000, guid: 843caf29685409b43a07fe96b17d9aff, type: 3}
+  - name: UISound
+    clip: {fileID: 8300000, guid: 795c4ea2ea1ffc54982c652644a64520, type: 3}
     volume: 0.654
     pitch: 1.5
     loop: 0
@@ -88,17 +88,42 @@ MonoBehaviour:
     pitch: 1.5
     loop: 0
     source: {fileID: 0}
+  - name: SwordSoun3
+    clip: {fileID: 8300000, guid: 8857f055e12141842b68878e1b7a946e, type: 3}
+    volume: 0.599
+    pitch: 1.5
+    loop: 0
+    source: {fileID: 0}
+  - name: SwordSoun3
+    clip: {fileID: 8300000, guid: 7c188db8b730e0d48bfd70476170810b, type: 3}
+    volume: 0.599
+    pitch: 1.5
+    loop: 0
+    source: {fileID: 0}
   hurtSounds:
   - name: Hurt1
     clip: {fileID: 8300000, guid: f625d9e7a1944b744959caff2270b357, type: 3}
     volume: 0.492
-    pitch: 1.4
+    pitch: 1.5
     loop: 0
     source: {fileID: 0}
   - name: Hurt2
     clip: {fileID: 8300000, guid: 29ebdc2e8883cb34b9ff05d35b227f76, type: 3}
     volume: 0.488
-    pitch: 1.4
+    pitch: 1.5
+    loop: 0
+    source: {fileID: 0}
+  monsterHurtSounds:
+  - name: MonsterHurt1
+    clip: {fileID: 8300000, guid: 843caf29685409b43a07fe96b17d9aff, type: 3}
+    volume: 0.469
+    pitch: 1.5
+    loop: 0
+    source: {fileID: 0}
+  - name: MonsterHurt2
+    clip: {fileID: 8300000, guid: 7e31f850f32ddbb448fb354c57c98983, type: 3}
+    volume: 0.5
+    pitch: 1.5
     loop: 0
     source: {fileID: 0}
   soundtrackSource: {fileID: 9591775113294405}

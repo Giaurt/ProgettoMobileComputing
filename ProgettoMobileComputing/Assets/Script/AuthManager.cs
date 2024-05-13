@@ -110,10 +110,11 @@ void AuthStateChanged(object sender, System.EventArgs eventArgs) {
     }
 
     public void LoginButton(){
+        FindAnyObjectByType<AudioManager>().Play("UISound");
         StartCoroutine(Login(emailLoginField.text, passwordLoginField.text));
     }
     public void RegisterButton(){
-        
+        FindAnyObjectByType<AudioManager>().Play("UISound");
         StartCoroutine(Register(emailRegisterField.text, passwordRegisterField.text, usernameRegisterField.text));
         
     }

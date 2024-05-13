@@ -28,11 +28,13 @@ public class UiAuthManager : MonoBehaviour
     //Functions to change the login screen UI
     public void LoginScreen() //Back button
     {
+        FindAnyObjectByType<AudioManager>().Play("UISound");
         loginUI.SetActive(true);
         registerUI.SetActive(false);
     }
     public void RegisterScreen() // Regester button
     {
+        FindAnyObjectByType<AudioManager>().Play("UISound");
         loginUI.SetActive(false);
         registerUI.SetActive(true);
     }

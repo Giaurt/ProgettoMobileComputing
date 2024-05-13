@@ -6795,6 +6795,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3230122851542661183, guid: d3f126cdb2d34504689fb8c8b0611db9, type: 3}
+      propertyPath: sounds.Array.data[3].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 76900dfe0d15dc34fb621e6ab0cf8466, type: 3}
+    - target: {fileID: 3230122851542661183, guid: d3f126cdb2d34504689fb8c8b0611db9, type: 3}
+      propertyPath: swordSounds.Array.data[1].name
+      value: SwordSound2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3230122851542661183, guid: d3f126cdb2d34504689fb8c8b0611db9, type: 3}
+      propertyPath: swordSounds.Array.data[2].name
+      value: SwordSound3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3230122851542661183, guid: d3f126cdb2d34504689fb8c8b0611db9, type: 3}
+      propertyPath: swordSounds.Array.data[3].name
+      value: SwordSound3
+      objectReference: {fileID: 0}
     - target: {fileID: 5612763530613141523, guid: d3f126cdb2d34504689fb8c8b0611db9, type: 3}
       propertyPath: m_Name
       value: AudioManager

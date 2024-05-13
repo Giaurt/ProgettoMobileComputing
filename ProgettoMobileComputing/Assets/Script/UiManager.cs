@@ -29,18 +29,22 @@ public class UiManager : MonoBehaviour
 
     public void MainMenuButton(){
         Time.timeScale = 1;
+        FindAnyObjectByType<AudioManager>().Play("UISound");
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex-1);
     }
     public void RetryButton(){
         Time.timeScale = 1;
+        FindAnyObjectByType<AudioManager>().Play("UISound");
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
     public void PauseButton(){
+        FindAnyObjectByType<AudioManager>().Play("UISound");
         pauseMenu.SetActive(true);
         joystickUI.SetActive(false);
         Time.timeScale = 0;
     }
     public void ResumeButton(){
+        FindAnyObjectByType<AudioManager>().Play("UISound");
         pauseMenu.SetActive(false);
         joystickUI.SetActive(true);
         Time.timeScale = 1;
