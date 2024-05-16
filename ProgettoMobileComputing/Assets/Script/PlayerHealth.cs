@@ -25,7 +25,6 @@ public class PlayerHealth : MonoBehaviour
         if(currentHealth<=0){
             
             isDead = true;
-            FindObjectOfType<AudioManager>().Play("PlayerDeath");
             FindAnyObjectByType<FadeDeathScreen>().FadeOutImage(1);
             Invoke("StopTime" , 3f);
             
