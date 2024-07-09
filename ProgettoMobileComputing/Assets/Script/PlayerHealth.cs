@@ -26,7 +26,7 @@ public class PlayerHealth : MonoBehaviour
             
             isDead = true;
             FindAnyObjectByType<FadeDeathScreen>().FadeOutImage(1);
-            Invoke("StopTime" , 3f);
+            Invoke("StopTime" , 1.2f);
             
         }
         

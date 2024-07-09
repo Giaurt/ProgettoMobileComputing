@@ -27,7 +27,8 @@ public class SpawnEnemies : MonoBehaviour
         enemiesNumber = Random.Range(rndMin, rndMax);
         for(int i = 0; i<enemiesNumber; i++ ){
             Vector3 spawnPosition = new Vector3(Random.Range(spawnPos1.position.x, spawnPos2.position.x), 0, Random.Range(spawnPos1.position.z, spawnPos2.position.z));
-            GameObject skelly = Instantiate(enemyPrefab, spawnPosition, Quaternion.identity);
+            Vector3 rndAngle = new Vector3(0, Random.Range(0, 360), 0);
+            GameObject skelly = Instantiate(enemyPrefab, spawnPosition, Quaternion.Euler(rndAngle));
             skelly.transform.SetParent(gameObject.transform);
             
         }

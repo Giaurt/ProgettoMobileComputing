@@ -28,12 +28,11 @@ public class EnemyFollow : MonoBehaviour
         if(GetComponent<Health>().currentHealth<=0){
             isDead = true;
         }
-        //animator.SetBool("IsInRange", isInRange);
+
         if(!isDead){
             if(TargetDistance()<maxDistance && !isTargeted){
             animator.SetBool("TargetAcquired", true);
             transform.position = Vector3.MoveTowards(transform.position, player.position, 2 * Time.deltaTime);
-            //transform.rotation = new Quaternion(0, GetAngleBetweenTarget().y, 0, 0);
             transform.LookAt(player.transform);
             isTargeted = true;
         }else{
@@ -42,7 +41,6 @@ public class EnemyFollow : MonoBehaviour
         if(isTargeted){
             animator.SetBool("TargetAcquired", true);
             transform.position = Vector3.MoveTowards(transform.position, player.position, 2 * Time.deltaTime);
-            //transform.rotation = new Quaternion(0, GetAngleBetweenTarget().y, 0, 0);
             transform.LookAt(player.transform);
             isTargeted = true;
         }
@@ -76,7 +74,6 @@ public class EnemyFollow : MonoBehaviour
     void OnTriggerExit(Collider other) {
         if(other.gameObject.CompareTag("Player")){
             canAttackRange = false;
-            //Debug.Log("uscito");
         } 
     }
 }

@@ -60,6 +60,8 @@ public class AudioManager : MonoBehaviour
 			soundtrackSource.clip = soundtrack[UnityEngine.Random.Range(0, soundtrack.Length)];
 			soundtrackSource.Play();
 		}
+        Debug.Log("Kills= " + PlayerPrefs.GetInt("MaxSkeletonKilled").ToString());
+        Debug.Log("Rooms= " + PlayerPrefs.GetInt("MaxRoomSurvived").ToString());
     }
     public void RandomSwordSound(int i){
         string name = swordSounds[i].name;

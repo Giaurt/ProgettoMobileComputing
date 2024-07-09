@@ -8,7 +8,6 @@ public class AttackArea : MonoBehaviour
     
     private void OnTriggerEnter(Collider collider) {
         if(collider.CompareTag("Enemy")){
-            Debug.Log("entra");
             collider.GetComponent<Health>().Damage(damage);
             
         }

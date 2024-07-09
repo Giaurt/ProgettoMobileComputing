@@ -330,7 +330,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 86, y: -0}
+  m_AnchoredPosition: {x: 141, y: 0}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &98082648
@@ -482,8 +482,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+    rgba: 4288454047
+  m_fontColor: {r: 0.62352943, g: 0.6156863, b: 0.6117647, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1307,8 +1307,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+    rgba: 4279050813
+  m_fontColor: {r: 0.2392157, g: 0.13333334, b: 0.050980397, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1889,8 +1889,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 86, y: -0}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: 141, y: 0}
+  m_SizeDelta: {x: 296.8015, y: 51.03}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &608591734
 GameObject:
@@ -1958,8 +1958,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+    rgba: 4288454047
+  m_fontColor: {r: 0.62352943, g: 0.6156863, b: 0.6117647, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -3041,7 +3041,7 @@ Transform:
   m_GameObject: {fileID: 739326301}
   serializedVersion: 2
   m_LocalRotation: {x: 0.032650907, y: -0.5228484, z: 0.016068587, w: 0.85164857}
-  m_LocalPosition: {x: 2.786, y: 2.019, z: -3.808}
+  m_LocalPosition: {x: 3.152, y: 2.701, z: -2.979}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3113,8 +3113,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+    rgba: 4288454047
+  m_fontColor: {r: 0.62352943, g: 0.6156863, b: 0.6117647, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -4969,8 +4969,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+    rgba: 4288454047
+  m_fontColor: {r: 0.62352943, g: 0.6156863, b: 0.6117647, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -5407,8 +5407,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+    rgba: 4279050813
+  m_fontColor: {r: 0.2392157, g: 0.13333334, b: 0.050980397, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -6144,8 +6144,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+    rgba: 4279050813
+  m_fontColor: {r: 0.2392157, g: 0.13333334, b: 0.050980397, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -6514,7 +6514,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 39}
-  m_SizeDelta: {x: 340.4, y: 64.1898}
+  m_SizeDelta: {x: 347.8683, y: 64.9907}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1860050379
 MonoBehaviour:
@@ -6536,7 +6536,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Numer of rooms survived
+  m_text: Number of rooms survived
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
@@ -6796,20 +6796,24 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3230122851542661183, guid: d3f126cdb2d34504689fb8c8b0611db9, type: 3}
-      propertyPath: sounds.Array.data[3].clip
+      propertyPath: sounds.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3230122851542661183, guid: d3f126cdb2d34504689fb8c8b0611db9, type: 3}
+      propertyPath: sounds.Array.data[4].clip
       value: 
       objectReference: {fileID: 8300000, guid: 76900dfe0d15dc34fb621e6ab0cf8466, type: 3}
     - target: {fileID: 3230122851542661183, guid: d3f126cdb2d34504689fb8c8b0611db9, type: 3}
-      propertyPath: swordSounds.Array.data[1].name
-      value: SwordSound2
+      propertyPath: sounds.Array.data[4].name
+      value: UISound
       objectReference: {fileID: 0}
     - target: {fileID: 3230122851542661183, guid: d3f126cdb2d34504689fb8c8b0611db9, type: 3}
-      propertyPath: swordSounds.Array.data[2].name
-      value: SwordSound3
+      propertyPath: sounds.Array.data[4].pitch
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 3230122851542661183, guid: d3f126cdb2d34504689fb8c8b0611db9, type: 3}
-      propertyPath: swordSounds.Array.data[3].name
-      value: SwordSound3
+      propertyPath: sounds.Array.data[4].volume
+      value: 0.654
       objectReference: {fileID: 0}
     - target: {fileID: 5612763530613141523, guid: d3f126cdb2d34504689fb8c8b0611db9, type: 3}
       propertyPath: m_Name
@@ -7020,8 +7024,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+    rgba: 4279050813
+  m_fontColor: {r: 0.2392157, g: 0.13333334, b: 0.050980397, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:

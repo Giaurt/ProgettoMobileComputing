@@ -20,7 +20,7 @@ public class SpawnHealthPotion : MonoBehaviour
     {
         if(canSpawn && GetComponent<SpawnEnemies>().enemiesNumber==0){
             rnd = Random.Range(0,100);
-            if(Random.value >0.7){
+            if(Random.value >0.6){
                 GameObject key = Instantiate(potionPrefab, new Vector3(Random.Range(spawnPos1.position.x, spawnPos2.position.x), spawnPos1.position.y, Random.Range(spawnPos1.position.z, spawnPos2.position.z)), Quaternion.Euler(0f, 0f, 0f));
                 key.transform.SetParent(gameObject.transform);
                 

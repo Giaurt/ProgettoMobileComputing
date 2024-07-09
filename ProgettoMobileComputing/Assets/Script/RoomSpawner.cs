@@ -19,9 +19,7 @@ public class RoomSpawner : MonoBehaviour
         nextSpawnPoint = firstSpawnPoint.transform.position;
         startingRoom = GameObject.FindGameObjectWithTag("StartingRoom");
         spawnedRooms.Add(startingRoom);
-        /*for(int i = 0; i<2; i++){
-            SpawnTile();
-        }*/
+
     }
     void Update(){
         if(currentRoomIndex == 2){

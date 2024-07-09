@@ -27,16 +27,8 @@ public class PlayerAttack : MonoBehaviour
     void Update()
     {
         animator.SetBool("IsAttacking", isAttacking);
-        /*if(Input.GetKeyDown(KeyCode.Space)){
-            Attack();
-        }*/
-        /*if(canAttack && Input.GetMouseButtonDown(0)){
-            isAttacking = true;
-            StartCoroutine(AttackTimer());
 
-        }*/
        if(canAttack && Input.GetKeyDown(KeyCode.Space)){
-            Debug.Log("entra");
             isAttacking = true;
             StartCoroutine(AttackTimer());
         }
@@ -56,7 +48,6 @@ public class PlayerAttack : MonoBehaviour
 
     public void AttackButton(){
         if(canAttack){
-            Debug.Log("entra");
             isAttacking = true;
             
             StartCoroutine(AttackTimer());

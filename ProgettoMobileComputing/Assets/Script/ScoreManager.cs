@@ -18,16 +18,20 @@ public class ScoreManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(PlayerPrefs.HasKey("MaxSkeletonKilled") && PlayerPrefs.GetInt("MaxSkeletonKilled")<enemyKilled){
+        if(PlayerPrefs.HasKey("MaxSkeletonKilled")){
+            if(PlayerPrefs.GetInt("MaxSkeletonKilled")<enemyKilled){
+                PlayerPrefs.SetInt("MaxSkeletonKilled", enemyKilled);
+            }
+        }else{
             PlayerPrefs.SetInt("MaxSkeletonKilled", enemyKilled);
-        }/*else{
-            PlayerPrefs.SetInt("MaxSkeletonKilled", enemyKilled);
-        }*/
-        if(PlayerPrefs.HasKey("MaxRoomSurvived") && PlayerPrefs.GetInt("MaxRoomSurvived")<roomSurvived){
+        }
+        if(PlayerPrefs.HasKey("MaxRoomSurvived")){
+            if(PlayerPrefs.GetInt("MaxRoomSurvived")<roomSurvived){
+                PlayerPrefs.SetInt("MaxRoomSurvived", roomSurvived);
+            }
+        }else{
             PlayerPrefs.SetInt("MaxRoomSurvived", roomSurvived);
-        }/*else{
-            PlayerPrefs.SetInt("MaxRoomSurvived", roomSurvived);
-        }*/
+        }
         gameOverRooms.text = roomSurvived.ToString();
         pauseRooms.text = roomSurvived.ToString();
     }
